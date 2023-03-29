@@ -6,7 +6,7 @@ class ATarget;
 
 class ASpell
 {
-    private:// or protected?
+    private:
         std::string name;
         std::string effects;
 
@@ -20,7 +20,7 @@ class ASpell
         std::string const &getName() const;
         std::string const &getEffects() const;
 
-        void launch(ATarget const &atarget) const;
+        void launch(ATarget const &atarget_ref) const;
 
         virtual ASpell *clone() const = 0;
 };
