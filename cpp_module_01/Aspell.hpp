@@ -6,9 +6,13 @@ class ATarget;
 
 class ASpell
 {
-    private:// or protected?
+    protected:
         std::string name;
         std::string effects;
+        
+    // private:// or protected?
+    //     std::string name;
+    //     std::string effects;
 
     public:
         ASpell();

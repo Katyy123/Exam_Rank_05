@@ -15,7 +15,7 @@ class Warlock
         Warlock(Warlock const &other);
         Warlock &operator=(Warlock const &other);
 
-        std::map<std::string, ASpell *> arr;
+        std::map<std::string, ASpell *> map;
 		
     public:
         Warlock(std::string const &name, std::string const &title);

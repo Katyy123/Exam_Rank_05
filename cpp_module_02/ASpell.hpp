@@ -6,9 +6,13 @@ class ATarget;
 
 class ASpell
 {
-    private:
+    protected:
         std::string name;
         std::string effects;
+
+    // private:
+    //     std::string name;
+    //     std::string effects;
 
     public:
         ASpell();

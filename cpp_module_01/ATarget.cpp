@@ -4,10 +4,14 @@ ATarget::ATarget() {
 
 }
 
-ATarget::ATarget(std::string const &type) {
+ATarget::ATarget(std::string const &type) : type(type) {
 	
-	this->type = type;
 }
+
+// ATarget::ATarget(std::string const &type) {
+	
+// 	this->type = type;
+// }
 
 ATarget::ATarget(ATarget const &other) {
 	
