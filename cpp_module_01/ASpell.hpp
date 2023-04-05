@@ -9,10 +9,6 @@ class ASpell
     protected:
         std::string name;
         std::string effects;
-        
-    // private:// or protected?
-    //     std::string name;
-    //     std::string effects;
 
     public:
         ASpell();

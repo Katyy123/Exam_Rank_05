@@ -9,12 +9,6 @@ ASpell::ASpell(std::string const &name, std::string const &effects) : name(name)
 
 }
 
-// ASpell::ASpell(std::string const &name, std::string const &effects) {
-    
-// 	this->name = name;
-//     this->effects = effects;
-// }
-
 ASpell::ASpell(ASpell const &other) {
 	
 	*this = other;
