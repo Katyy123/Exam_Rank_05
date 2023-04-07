@@ -9,11 +9,11 @@ Warlock::~Warlock() {
     
 	std::cout << this->name << ": My job here is done!\n";
 
-    std::map<std::string, ASpell *>::iterator it_begin;// = map.begin();
+    std::map<std::string, ASpell *>::iterator it;
     std::map<std::string, ASpell *>::iterator it_end = map.end();
 
-	for (it_begin = map.begin(); it_begin != it_end; ++it_begin)
-		delete it_begin->second;
+	for (it = map.begin(); it != it_end; ++it)
+		delete it->second;
     map.clear();
 }
 
@@ -38,7 +38,7 @@ void Warlock::introduce() const {
 
 void Warlock::learnSpell(ASpell* spell) {
 	
-	if (spell)
+	if (spell && map.find(spell->getName()) == map.end())
 		map.insert(std::pair<std::string, ASpell *>(spell->getName(), spell->clone()));
 }
 
