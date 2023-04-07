@@ -1,33 +1,29 @@
-nclude "ATarget.hpp"
+#include "ATarget.hpp"
 
 ATarget::ATarget() {
-
 }
 
 ATarget::ATarget(std::string const & type) : type(type) {
-
 
 }
 
 ATarget::ATarget(ATarget const & other) {
 
-        *this = other;
+    *this = other;
 }
 
 ATarget & ATarget::operator=(ATarget const & other) {
 
-        this->name = other.type;
-        return (*this);
+    this->type = other.type;
+	return (*this);
 }
 
 ATarget::~ATarget() {
-
-
 }
 
 std::string const & ATarget::getType() const {
 
-        return type;
+    return type;
 }
 
 void ATarget::getHitBySpell(ASpell const & spell) const {
