@@ -1,7 +1,7 @@
 #pragma once
 
 #include <iostream>
-#include "SpellBook.hpp"
+#include <map>
 #include "ASpell.hpp"
 #include "ATarget.hpp"
 
@@ -16,7 +16,7 @@ class Warlock
 		Warlock(Warlock const & other);
 		Warlock & operator=(Warlock const & other);
 
-		SpellBook book;
+		std::map<std::string, ASpell *> map;
 
 	public:
 		Warlock(std::string const & name, std::string const & title);

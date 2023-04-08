@@ -1,13 +1,13 @@
 #include "Warlock.hpp"
 
-Warlock::Warlock(std::string const & name, std::string const & title) : name(name), title(title) {
+Warlock::Warlock(std::string const & name, std::string const &title) : name(name), title(title) {
 
 	std::cout << name << ": This looks like another boring day." << std::endl;
 }
 
 Warlock::~Warlock() {
 
-	std::cout << name << ": My job here is done!"<< std::endl;
+	std::cout << name << ": My job here is done!" << std::endl;
 }
 
 std::string const & Warlock::getName() const {
