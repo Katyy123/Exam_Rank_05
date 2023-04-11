@@ -6,21 +6,21 @@ SpellBook::SpellBook() {
 
 SpellBook::~SpellBook() {
     
-    std::map<std::string, ASpell *>::iterator it_begin;// = this->map_spell.begin();
+    std::map<std::string, ASpell *>::iterator it;
     std::map<std::string, ASpell *>::iterator it_end = map_spell.end();
 
-    for (it_begin = map_spell.begin(); it_begin != it_end; ++it_begin)
-		delete it_begin->second;
+    for (it = map_spell.begin(); it != it_end; ++it)
+		delete it->second;
     map_spell.clear();
 }
 
-void SpellBook::learnSpell(ASpell* spell) {
+void SpellBook::learnSpell(ASpell * spell) {
     
     if (spell)
         map_spell.insert(std::pair<std::string, ASpell *>(spell->getName(), spell->clone()));
 }
 
-void SpellBook::forgetSpell(std::string const &name) {
+void SpellBook::forgetSpell(std::string const & name) {
     
     std::map<std::string, ASpell *>::iterator it = map_spell.find(name);
 
@@ -30,7 +30,7 @@ void SpellBook::forgetSpell(std::string const &name) {
     }
 }
 
-ASpell* SpellBook::createSpell(std::string const &name) {
+ASpell* SpellBook::createSpell(std::string const & name) {
     
     std::map<std::string, ASpell *>::iterator it = map_spell.find(name);
 
